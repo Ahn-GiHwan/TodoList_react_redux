@@ -1,4 +1,4 @@
-# Seoul Trash Map
+# TodoList + redux
 
 > 할 일을 적고 체크할 수 있는 사이트
 
@@ -21,4 +21,4 @@
 
 ### 이미지 클릭 -> 페이지 이동
 
-[![garo](https://github.com/Ahn-GiHwan/TodoList-react-redux/blob/master/public/todo.png?raw=true)](https://t0d0-1ist.netlify.app/)
+[![garo](https://github.com/Ahn-GiHwan/TodoList_react_redux/blob/master/public/todo.png?raw=true)](https://t0d0-1ist.netlify.app/)
