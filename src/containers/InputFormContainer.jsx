@@ -11,11 +11,11 @@ export default function InputFormContainer() {
 
   const onAddTodo = useCallback(() => {
     let value = inputRef.current.value;
-    if (value === "") {
+    if (value === "" || value.trim() === "") {
       alert("내용을 입력해 주세요");
       return false;
     }
-    dispatch(addTodo(value));
+    dispatch(addTodo(value.trim()));
 
     inputRef.current.value = "";
   }, [dispatch]);

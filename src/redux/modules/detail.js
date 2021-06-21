@@ -1,24 +1,31 @@
-const GET_DETAIL = "GET_DETAIL";
-const SET_DETAIL = "SET_DETAIL";
+const OPEN_MODAL = "OPEN_MODAL";
+const CLOSE_MODAL = "CLOSE_MODAL";
 
-export const getDetail = () => {
-  return { type: GET_DETAIL };
+export const openModal = () => {
+  return { type: OPEN_MODAL };
 };
-export const setDetail = () => {
-  return { type: SET_DETAIL };
+export const closeModal = () => {
+  return { type: CLOSE_MODAL };
 };
 
 const initialState = {
-  focus: [],
+  isModal: false,
 };
 
 const reducer = (state = initialState, action) => {
-  if (action.type === GET_DETAIL) {
-    return { ...state };
+  if (action.type === OPEN_MODAL) {
+    return {
+      ...state,
+      isModal: true,
+    };
   }
-  if (action.type === SET_DETAIL) {
-    return { ...state };
+  if (action.type === CLOSE_MODAL) {
+    return {
+      ...state,
+      isModal: false,
+    };
   }
+
   return state;
 };
 

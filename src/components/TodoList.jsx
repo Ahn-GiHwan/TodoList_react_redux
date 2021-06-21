@@ -1,6 +1,18 @@
 import { useEffect } from "react";
+import { Modal, Button, Input } from "antd";
 
-export default function TodoList({ todos, onGetTodos, onDeleteTodo, onCheck }) {
+export default function TodoList({
+  todos,
+  isModal,
+  value,
+  onGetTodos,
+  onDeleteTodo,
+  onCheck,
+  showModal,
+  handleOk,
+  handleCancel,
+  onChange,
+}) {
   useEffect(() => {
     onGetTodos();
   }, [onGetTodos]);
@@ -12,6 +24,7 @@ export default function TodoList({ todos, onGetTodos, onDeleteTodo, onCheck }) {
   const stylesFont = {
     color: "gray",
   };
+
   return (
     <>
       <div style={stylesDiv}>
@@ -43,15 +56,23 @@ export default function TodoList({ todos, onGetTodos, onDeleteTodo, onCheck }) {
                           >
                             Check
                           </button>
-                          {/* <button
-                            type="button"
-                            className="btn btn-outline-primary btn-sm"
-                            // onClick={() => detail(todo.id)}
-                            data-bs-toggle="modal"
-                            data-bs-target="#exampleModal"
+                          <Button
+                            type="primary"
+                            onClick={() => showModal(todo.id)}
                           >
-                            Change
-                          </button> */}
+                            Modify
+                          </Button>
+                          <Modal
+                            title="Todo Change"
+                            visible={isModal}
+                            onOk={handleOk}
+                            onCancel={handleCancel}
+                          >
+                            <Input
+                              value={value}
+                              onChange={(e) => onChange(e)}
+                            />
+                          </Modal>
                           <button
                             type="button"
                             className="btn btn-danger btn-sm"
