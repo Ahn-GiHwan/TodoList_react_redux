@@ -10,6 +10,7 @@
 |     useEffect     | Hook의 lifecycle로 mount순서에 따라, 혹은 변수의 변화, 함수의 사용에 따라 render를 다시 시킬 수 있다.              |
 |       Redux       | redux를 통해 state값을 통합으로 관리하여 props로 상태를 이동시키는게 아니라 store에서 바로 state값을 받을 수 있다. |
 |   Ducks-pattern   | redux의 action과 reducer를 하나로 합쳐서 개발하는 패턴이다. modules 폴더에서 통합관리                              |
+|   redux-actions   | redux의 Ducks-pattern에 맞게 개발할 수 있게 도와주는 Library이다                                                   |
 |    react-redux    | React에서 Redux를 더 편하게 사용하기 위한 Library이다                                                              |
 |    useSeletor     | react-redux의 기능으로 store에 보관된 state를 편하게 불러올 수 있다.                                               |
 |    useDispatch    | react-redux의 기능으로 action함수를 편하게 실행할 수 있다.                                                         |
