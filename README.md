@@ -23,4 +23,4 @@
 
 ### 이미지 클릭 -> 페이지 이동
 
-[![garo](https://github.com/Ahn-GiHwan/TodoList_react_redux/blob/master/public/todo.png?raw=true)](https://t0d0-1ist.netlify.app/)
+[![garo](https://github.com/Ahn-GiHwan/TodoList_react_redux/blob/master/public/todo.png?raw=true)](https://t0d01ist.netlify.app/)
